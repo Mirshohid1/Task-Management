@@ -31,7 +31,7 @@ class Task(models.Model):
     status = models.CharField(
         max_length=12,
         choices=STATUS_CHOICES,
-        default=STATUS_CHOICES[0][0],
+        default='pending',
         validators=[MinLengthValidator(6)],
     )
     created_at = models.DateTimeField(auto_now_add=True)
